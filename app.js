@@ -8,6 +8,8 @@ const countryEl = document.querySelector("#name");
 const populationEl = document.querySelector("#population");
 const capitalEl = document.querySelector("#capital");
 const areaEl = document.querySelector("#area");
+const languageEl = document.querySelector("#languages");
+const currencyEl = document.querySelector("#currency");
 
 searchEl.addEventListener("click", () => {
 
@@ -26,5 +28,8 @@ searchEl.addEventListener("click", () => {
         populationEl.innerHTML = countryData.population;
         capitalEl.innerHTML = countryData.capital;
         areaEl.innerHTML = countryData.area;
+        languageEl.innerHTML = Object.values(countryData.languages).toString().split(",").join(",");
+        currencyEl.innerHTML = countryData.currencies[Object.keys(countryData.currencies)].name;
+        currencyShort.innerHTML = Object.keys(countryData.currencies)[0];
     })
 })

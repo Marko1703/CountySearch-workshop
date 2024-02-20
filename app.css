@@ -52,6 +52,10 @@ body {
     cursor: pointer;
 }
 
+.search-wrapper button:hover {
+    background-color: rgb(84, 183, 216);
+}
+
 #search_result {
     display: none;
     margin-top: 20px;
